@@ -1,7 +1,7 @@
 <template>
   <div class="organiza container" >
     <van-divider :style="{ borderColor: '#263e64'}" class="bTitle">峰会嘉宾</van-divider>
-    <div class="guList" v-for="(item,index) in json" :key="index">
+    <div class="guList" v-for="(item,index) in selectJson" :key="index">
       <div class="guwrap">
         <van-row type="flex" justify="space-around" style="margin-bottom:.4rem;">
           <van-col span="8" v-for="(items,i) in item.main" :key="items.id">
@@ -17,13 +17,18 @@
             </div>
           </van-col>
         </van-row>
-        <transition-group name="van-fade">
+        <!-- <transition-group name="van-fade">
           <div class="text-content" v-for="(items,i) in item.main" :key="items.id" v-show="items.active">
             <h3 class="c-title">{{items.name}}</h3>
             <p class="c-mtitle">{{items.title}}</p>
             <div class="t-m" v-html="items.desc"></div>
           </div>
-        </transition-group>
+        </transition-group> -->
+        <div class="text-content" v-for="(items,i) in item.main" :key="items.id" v-show="items.active">
+          <h3 class="c-title">{{items.name}}</h3>
+          <p class="c-mtitle">{{items.title}}</p>
+          <div class="t-m" v-html="items.desc"></div>
+        </div>
 
       </div>
     </div>
@@ -40,24 +45,47 @@
         textShow:false,
         isChoose:'',
         json:require('../../static/gust.json'),
+        jsonPC:require('../../static/PC.json'),
+        selectJson:[],
         text:{}
       }
     },
     created() {
+      let isWhat = this.IsPC()
+      if(isWhat){//PC 5条一行
+        this.selectJson = this.jsonPC
+      }else{//Moblie 3条一行
+        this.selectJson = this.json
+      }
     },
     methods: {
       toggleText(item,id,index){
-        this.json.map((arr) => {
+        this.selectJson.map((arr) => {
           arr.main.filter((items) => {
             if (items.id === id) {
               items.active = !item.active;
-              this.text = items
+              // this.text = items
             }else{
               items.active = false;
             }
           })
         })
 
+      },
+      // 判断PC
+      IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
       }
     }
   }
@@ -69,10 +97,10 @@
   padding: .6rem 5px;
 }
 .item{
-  display: inline-block;
-  max-width: 4.6rem;
+  /* display: inline-block; */
+  /* max-width: 4.6rem; */
   min-width: 3.1rem;
-  height: 5.8rem;
+  height: 6.1rem;
   margin: 0 .1rem;
   text-align: center;
   position: relative;
@@ -106,12 +134,12 @@
   height: .8rem; */
 }
 .text{
-  font-size: .4rem;
+  font-size: .34rem;
   color: #1d284e;
   line-height: .5rem;
   /* height: 1.2rem; */
   text-align: justify;
-  padding: 0 .1rem;
+  padding: 0 .2rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -124,6 +152,12 @@
   border: 1px solid #ddd;
   background: #fff;
   text-align: left;
+
+
+}
+.text-content.hiClass{
+  opacity: 1;
+  transition: all 2s;
 }
 .c-title{
   font-size: 0.46rem;
@@ -154,5 +188,13 @@
 }
 .item:hover{
   cursor: pointer;
+}
+.fades-enter-active,
+.fades-leave-active {
+  transition: all 0.5s;
+}
+.fades-enter,
+.fades-leave-to {
+  height: 0;
 }
 </style>

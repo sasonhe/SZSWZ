@@ -1,27 +1,37 @@
 <template>
   <div class="header">
-    <van-nav-bar title="2019生物展峰会" fixed :z-index="11" @click-right="menuBar">
-      <van-icon class="haver" name="apps-o" slot="right" />
-    </van-nav-bar>
-    <transition name="van-slide-down">
-      <div class="list-bar" v-show="show">
-        <ul class="bar-list">
-          <li class="bar-item van-hairline--bottom">
-            <a href="#yourid" @click="jump(0)">大会简介</a>
-          </li>
-          <li class="bar-item van-hairline--bottom">
-            <a href="javascript:;" @click="jump(1)">组织架构</a>
-          </li>
-          <li class="bar-item van-hairline--bottom">
-            <a href="javascript:;" @click="jump(2)">峰会嘉宾</a>
-          </li>
-          <li class="bar-item van-hairline--bottom">
-            <a href="javascript:;">大会议程</a>
-          </li>
-        </ul>
+    <div class="mHeader" v-if="!showHeader">
+      <van-nav-bar title="2019生物展峰会" fixed :z-index="11" @click-right="menuBar">
+        <van-icon class="haver" name="apps-o" slot="right" />
+      </van-nav-bar>
+      <transition name="van-slide-down">
+        <div class="list-bar" v-show="show">
+          <ul class="bar-list">
+            <li class="bar-item van-hairline--bottom" v-for="(item,index) in json" :key="item.id">
+              <a href="javascript:;" @click="jump(item.id)">{{item.name}}</a>
+            </li>
+          </ul>
+        </div>
+      </transition>
+    </div>
+    <div class="pHeader" v-if="showHeader">
+      <div class="container">
+        <van-row>
+          <van-col span="10">
+            <h1 class="Ptitle">2019生物展峰会</h1>
+          </van-col>
+          <van-col span="14">
+            <div class="item-header">
+              <ul class="bar-list-p">
+                <li class="bar-item-p" v-for="(item,index) in json" :key="item.id">
+                  <a href="javascript:;" @click="jump(item.id)">{{item.name}}</a>
+                </li>
+              </ul>
+            </div>
+          </van-col>
+        </van-row>
       </div>
-    </transition>
-
+    </div>
   </div>
 </template>
 
@@ -29,13 +39,52 @@
   export default {
     data() {
       return {
-        show:false
+        show:false,
+        showHeader:true,
+        json:[
+          {
+            id:0,
+            name:'大会简介'
+          },
+          {
+            id:1,
+            name:'组织架构'
+          },
+          {
+            id:2,
+            name:'峰会嘉宾'
+          },
+          {
+            id:3,
+            name:'大会议程'
+          }
+        ]
       }
     },
     created() {
-
+      let isWhat = this.IsPC();
+      if(isWhat){
+        this.showHeader = true;
+      }else{
+        this.showHeader = false;
+      }
     },
     methods: {
+      // 判断PC
+      IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+      },
       menuBar(){
         this.show = !this.show;
       },
@@ -82,6 +131,20 @@
 </script>
 
 <style scoped>
+.pHeader{
+  width: 100%;
+  height: 1.4rem;
+  line-height: 1rem;
+  position:fixed;
+  top: 0;
+  z-index:10;
+  background: #050e19;
+  color: #fff;
+}
+.Ptitle{
+  font-size: .46rem;
+  font-weight: 400;
+}
 .haver{
   cursor: pointer;
 }
@@ -106,6 +169,20 @@
   font-size: .4rem;
   color: #d9d9d9;
   text-align: center;
+  cursor: pointer;
+}
+.item-header .bar-list-p{
+  text-align: right;
+}
+.bar-item-p{
+  display: inline-block;
+  padding:0 .2rem;
+}
+.bar-item-p a{
+  height: .8rem;
+  line-height:.8rem;
+  font-size: .4rem;
+  color: #d9d9d9;
   cursor: pointer;
 }
 .van-icon{

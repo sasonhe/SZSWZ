@@ -2,7 +2,7 @@
   <div class="organiza container">
     <van-divider :style="{ borderColor: '#263e64'}" class="bTitle">组织架构</van-divider>
     <div class="">
-      <h2 class="topTitle">主办单位：</h2>
+      <h2 class="topTitle">主办单位</h2>
       <p class="msTitle">深圳市坪山区人民政府</p>
       <p class="msTitle">中国国际贸易促进委员会深圳市委员会</p>
     </div>
@@ -18,6 +18,7 @@
         <p class="msTitle">中国国际贸易促进委员会深圳市委员会</p>
       </van-col>
     </van-row>
+
   </div>
 </template>
 
@@ -37,6 +38,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.o-wrapper{
+  padding: .4rem;
+}
 .topTitle{
   font-size: .46rem;
   color: #263e64;

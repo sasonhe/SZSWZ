@@ -62,6 +62,8 @@ export default {
         }else{
           this.goTop = false
         }
+        // let curHeight = document.documentElement.scrollTop || document.body.scrollTop; // 得到当前高度
+        // console.log(curHeight);
       }
     }
 }
