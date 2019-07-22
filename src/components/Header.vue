@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="mHeader" v-if="!showHeader">
-      <van-nav-bar title="2019生物展峰会" fixed :z-index="11" @click-right="menuBar">
+      <van-nav-bar title="2019国际生物医药产业创新展峰会" fixed :z-index="11" @click-right="menuBar">
         <van-icon class="haver" name="apps-o" slot="right" />
       </van-nav-bar>
       <transition name="van-slide-down">
@@ -17,10 +17,10 @@
     <div class="pHeader" v-if="showHeader">
       <div class="container">
         <van-row>
-          <van-col span="10">
-            <h1 class="Ptitle">2019生物展峰会</h1>
+          <van-col span="6">
+            <h1 class="Ptitle">2019国际生物医药产业创新展峰会</h1>
           </van-col>
-          <van-col span="14">
+          <van-col span="18">
             <div class="item-header">
               <ul class="bar-list-p">
                 <li class="bar-item-p" v-for="(item,index) in json" :key="item.id">
@@ -56,7 +56,26 @@
           },
           {
             id:3,
-            name:'大会议程'
+            name:'峰会议程'
+          },
+          {
+            id:4,
+            name:'分会场 ( 一 )'
+          },{
+            id:5,
+            name:'分会场 ( 二 )'
+          },
+          {
+            id:6,
+            name:'分会场 ( 三 )'
+          },
+          {
+            id:7,
+            name:'报名参会'
+          },
+          {
+            id:8,
+            name:'合作媒体'
           }
         ]
       }
@@ -131,6 +150,9 @@
 </script>
 
 <style scoped>
+.van-nav-bar__title{
+  max-width:80%;
+}
 .pHeader{
   width: 100%;
   height: 1.4rem;
@@ -138,11 +160,11 @@
   position:fixed;
   top: 0;
   z-index:10;
-  background: #050e19;
+  background: #36a5be;
   color: #fff;
 }
 .Ptitle{
-  font-size: .46rem;
+  font-size: .36rem;
   font-weight: 400;
 }
 .haver{
@@ -156,8 +178,8 @@
   z-index:10;
 }
 .bar-list{
-  background: #050e19;
-  background: rgba(0, 0, 0, 0.8);
+  background: #36a5be;
+  background: rgba(54, 165, 190, .8);
 }
 .bar-item{
   padding: .2rem 0;
@@ -167,7 +189,7 @@
   height: .8rem;
   line-height:.8rem;
   font-size: .4rem;
-  color: #d9d9d9;
+  color: #FFF;
   text-align: center;
   cursor: pointer;
 }
@@ -181,21 +203,21 @@
 .bar-item-p a{
   height: .8rem;
   line-height:.8rem;
-  font-size: .4rem;
-  color: #d9d9d9;
+  font-size: .36rem;
+  color: #FFF;
   cursor: pointer;
 }
 .van-icon{
   font-size: .6rem;
-  color: #d9d9d9;
+  color: #FFF;
 }
 .van-nav-bar{
-  background: #050e19;
+  background: #36a5be;
   height: 1.2rem;
   line-height:1.2rem;
 }
 .van-nav-bar__title{
-  color: #d9d9d9;
+  color: #FFF;
   font-size: .46rem;
 }
 

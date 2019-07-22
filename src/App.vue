@@ -3,13 +3,26 @@
     <Heard/>
     <TopImg />
     <div class="bgColor">
-      <Swiper/>
+      <!-- <Swiper/> -->
       <Jshao  class="d_jump"/>
     </div>
     <Organiza class="d_jump"/>
     <div class="bgColorA d_jump">
       <Gust/>
     </div>
+    <div class="bgColorB d_jump">
+      <date-view/>
+    </div>
+    <div class="bgColorA">
+      <fen-date/>
+    </div>
+    <div class="bgColorA d_jump">
+      <Register/>
+    </div>
+    <div class="d_jump">
+      <Media/>
+    </div>
+
     <transition name="fade">
       <div class="goTop" v-show="goTop" @click="goToTop">
         <van-icon class="topSize" name="upgrade" />
@@ -22,10 +35,14 @@
 <script>
 import Heard from '@/components/Header';
 import TopImg from '@/components/TopImg';
-import Swiper from '@/components/Swiper';
+// import Swiper from '@/components/Swiper';
 import Jshao from '@/components/Jshao';
 import Organiza from '@/components/Organiza';
 import Gust from '@/components/Gust';
+import DateView from '@/components/DateView';
+import FenDate from '@/components/FenDate';
+import Media from '@/components/Media';
+import Register from '@/components/Register';
 // import Steps from '@/components/Steps';
 let timer = null;
 export default {
@@ -36,7 +53,7 @@ export default {
     }
   },
   components: {
-    Heard,TopImg,Swiper,Jshao,Organiza,Gust
+    Heard,TopImg,Jshao,Organiza,Gust,DateView,FenDate,Media,Register
   },
   mounted: function () {
     window.addEventListener('scroll', this.handleScroll, true);  // 监听（绑定）滚轮滚动事件
@@ -88,7 +105,7 @@ export default {
   background: #e1eefc;
 }
 .bTitle{
-  font-size: .5rem;
+  font-size: .58rem;
   color: #263e64;
   font-weight: bold;
   letter-spacing: 3px;
@@ -108,7 +125,9 @@ export default {
 .bgColorA{
   background: #d4e3f3;
 }
-
+.bgColorB{
+  background: #fff;
+}
 
 .goTop {
   position: fixed;
@@ -130,5 +149,14 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
 }
 </style>

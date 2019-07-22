@@ -41,11 +41,11 @@
 .desc{
   font-size: .32rem;
   color: #263e64;
-  line-height: .8rem;
+  line-height: .48rem;
 }
 .desc p{
   margin:0;
-  font-size: .4rem;
+  font-size: .32rem;
 }
 
 </style>

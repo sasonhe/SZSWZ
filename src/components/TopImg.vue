@@ -11,7 +11,7 @@
   export default {
     data() {
       return {
-        topLogo:require('@/assets/top/logo.png'),
+        topLogo:require('@/assets/top/logo.jpg'),
       }
     },
     created() {

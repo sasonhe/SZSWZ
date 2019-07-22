@@ -100,7 +100,7 @@
   /* display: inline-block; */
   /* max-width: 4.6rem; */
   min-width: 3.1rem;
-  height: 6.1rem;
+  height: 5.4rem;
   margin: 0 .1rem;
   text-align: center;
   position: relative;
@@ -127,16 +127,16 @@
 }
 .name{
   color: #3868bf;
-  font-size: .46rem;
+  font-size: .32rem;
   font-weight: bold;
   padding-bottom: .2rem;
   /* line-height: .8rem;
   height: .8rem; */
 }
 .text{
-  font-size: .34rem;
+  font-size: .24rem;
   color: #1d284e;
-  line-height: .5rem;
+  line-height: .36rem;
   /* height: 1.2rem; */
   text-align: justify;
   padding: 0 .2rem;
@@ -160,7 +160,7 @@
   transition: all 2s;
 }
 .c-title{
-  font-size: 0.46rem;
+  font-size: 0.56rem;
   color: #3858bf;
   padding: .22rem 0;
 }
@@ -171,10 +171,10 @@
 }
 .t-m{
   text-indent: 2em;
-  font-size: 0.4rem;
+  font-size: 0.36rem;
   color: #1c336f;
   margin-top: 0.3rem;
-  line-height: 0.6rem;
+  line-height: 0.5rem;
   word-break: break-word;
   text-align: justify;
 }
