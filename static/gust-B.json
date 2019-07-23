@@ -22,12 +22,7 @@
         "name": "谭铁牛",
         "title": "香港中联办副主任，中国科学院院士，英国皇家工程院外籍院士。",
         "desc": "<p>英国帝国理工学院电子电气工程系图像处理专业博士研究生，中国科学院院士、英国皇家工程院外籍院士、发展中国家科学院院士和巴西科学院通讯院士。</p><p>现任中央政府驻港联络办副主任、中国科学院自动化研究所研究员、博士生导师、智能感知与计算研究中心主任。</p><p>研究方向：谭铁牛博士主要从事图像处理、计算机视觉和模式识别等相关领域的研究工作，目前的研究主要集中在生物特征识别、图像视频理解和信息内容安全等三个方向。研究方向包括动态场景的计算机视觉监控、基于人的行为和生物特征的人物识别与身份鉴定以及数字多媒体数据的水印处理等。</p>"
-      }
-    ]
-  },
-  {
-    "index": 2,
-    "main": [
+      },
       {
         "id": 4,
         "active": false,
@@ -35,6 +30,18 @@
         "title": "中国科学院院士，美国国家科学院院士，西湖大学校长",
         "desc": "<p>施一公，1989年本科毕业于清华大学，1995年在美国约翰霍普金斯大学获博士学位。结构生物学家、清华大学教授、中国科学院院士、欧洲分子生物学学会外籍会士、美国国家科学院外籍院士、美国人文与科学院外籍院士，2017年获第二届“未来科学大奖”之“生命科学奖”。曾任清华大学副校长。</p><p>现任中国科学技术协会第九届全国委员会副主席，西湖大学校长。</p><p>2018年12月，入选“中国改革开放海归40年40人”榜单。</p><p>研究方向：主要从事细胞凋亡及膜蛋白两个领域的研究。在Smad对TGF-的调控机理、磷酸酶PP2A的结构生物学方面做出过有国际影响的工作。</p>"
       },
+      {
+        "id": 28,
+        "active": false,
+        "name": "饶毅",
+        "title": "现任首都医科大学校长，北京生命科学研究所资深研究员、学术副所长，未来论坛咨询委员会委员，《知识分子》主编  。",
+        "desc": "<p>研究领域：实验室研究方向是高等动物发育的分子信号，细胞迁移的分子机理、及其在控制肿瘤转移的应用。</p><p>执教课程：生物学思想与概念 Concepts and Ideas in Biology , Course master；分子和细胞神经生物学 Molecular and Cellular Neurobiology, Course master</p>"
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "main": [
       {
         "id": 5,
         "active": false,
@@ -48,12 +55,7 @@
         "name": "卢煜明",
         "title": "香港中文大学医学院副院长，美国科学院外籍院士",
         "desc": "<p>卢煜明，分子生物学临床应用专家，美国国家科学院外籍院士、发展中国家科学院院士、香港科学院创院院士，现任香港中文大学医学院副院长、化学病理学系系主任、李嘉诚健康科学研究所所长，香港中文大学化学病理学讲座教授、李嘉诚医学讲座教授。</p><p>卢煜明致力于研究人体内血浆的DNA和RNA，1997年就发现了孕妇外周血中存在游离的胎儿DNA，并发展出了一套新技术来准确分析和度量母亲血浆内的胎儿DNA，被誉为无创DNA产前检测的奠基人。</p>"
-      }
-    ]
-  },
-  {
-    "index": 3,
-    "main": [
+      },
       {
         "id": 7,
         "active": false,
@@ -69,24 +71,17 @@
         "desc": "<p>王晓东，生物化学家，美国国家科学院院士，中国科学院外籍院士，北京生命科学研究所所长 ，百济神州（北京）生物科技有限公司创始人 。</p><p>王晓东的研究重点是细胞凋亡的生物化学途径和生物化学过程。</p>"
       },
       {
-        "id": 9,
+        "id": 29,
         "active": false,
-        "name": "Jean-Pierre Cazenave",
-        "title": "（吉恩•皮埃尔•卡泽纳夫）",
-        "desc": "<p>法国医学科学院院士、法国斯特拉斯堡大学教授、著名血液病学专家</p>"
+        "name": "韩忠朝",
+        "title": "法国国家医学科学院外籍院士、北京汉氏联合生物技术股份有限公司董事长",
+        "desc": "<p>韩忠朝，男，汉族，1953年1月出生，江西省上饶人。南开大学医学院教授、博士生导师，并担任中国医学科学院中国协和医科大学血液学研究所血液病医院所院长，九三学社第十二届中央委员会常委，第十一届全国政协常委等职。并于2006年当选为法国医学科学院外籍院士。他主要从事血液血管细胞分子生物学以及生物技术的研究开发工作，在干细胞、巨核细胞和血小板、血管新生及其控制、趋化因子等方面的研究中取得许多国际领先水平的学术成果。</p>"
       }
     ]
   },
   {
-    "index": 4,
+    "index": 3,
     "main": [
-      {
-        "id": 10,
-        "active": false,
-        "name": "曹京华",
-        "title": "暂无",
-        "desc": "<p>暂无</p>"
-      },
       {
         "id": 11,
         "active": false,
@@ -94,18 +89,6 @@
         "title": "前美国FDA资深临床审批官",
         "desc": "<p>姚毅,医学博士，前美国食品和药品管理局（FDA）高级资深临床评审官。现任美国联邦政府高级医疗官，美国联邦政府医生。</p>"
       },
-      {
-        "id": 12,
-        "active": false,
-        "name": "钟伟强",
-        "title": "暂无",
-        "desc": "<p>暂无</p>"
-      }
-    ]
-  },
-  {
-    "index": 5,
-    "main": [
       {
         "id": 13,
         "active": false,
@@ -126,19 +109,20 @@
         "name": "李小加",
         "title": "香港交易所集团行政总裁。",
         "desc": "<p>李小加是一位受业内尊敬的资深银行家，具有近二十年的华尔街法律、金融与中国企业融资与顾问经验。2009年，成为香港交易所集团行政总裁。上任之后，大刀阔斧对港交所推行改革，包括人民币股票发行、单币单股等。</p>"
-      }
-    ]
-  },
-  {
-    "index": 6,
-    "main": [
+      },
       {
         "id": 16,
         "active": false,
         "name": "鲁先平",
         "title": "深圳微芯生物科技有限公司董事、总裁兼首席科学官",
         "desc": "<p>深圳微芯生物科技有限公司的主要发起和筹建人之一。被业内人士称为“新药研发斗士”  。</p><p>现任广东省科技专家委员会委员、深圳市科技专家委员会委员及生物、医药、医疗器械及环保组组长，科技部“863”专家。</p><p>鲁博士在分子医学、肿瘤、神经内分泌、免疫、代谢及皮肤病等方面有较深造诣。在核激素受体研究领域，尤其是在核激素受体配体的化学结构设计、生物和药物活性以及创新药物开发等方面，作出过许多重要贡献。</p>"
-      },
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "main": [
+
       {
         "id": 17,
         "active": false,
@@ -152,12 +136,7 @@
         "name": "梁颖宇",
         "title": "启明创投主管合伙人",
         "desc": "<p>梁颖宇女士拥有美国斯坦福大学商学院工商管理硕士学位和美国康奈尔大学管理学学士学位。现为甘李药业有限公司、再鼎医药、南通联亚药业、杭州诺尔康神经电子科技、嘉和科技、傲锐东源生物科技的董事会成员，也是香港科技大学商学院的理事会成员和霍奇基斯学校理事会成员。</p><p>梁颖宇女士是启明创投负责医疗健康行业投资的主管合伙人。启明创投是中国领先的创业投资机构之一。目前旗下共管理了5家美元基金，3家人民币基金，管理基金总规模已达25亿美元，已投资超过160家企业。</p>"
-      }
-    ]
-  },
-  {
-    "index": 7,
-    "main": [
+      },
       {
         "id": 19,
         "active": false,
@@ -182,8 +161,9 @@
     ]
   },
   {
-    "index": 8,
+    "index": 5,
     "main": [
+
       {
         "id": 22,
         "active": false,
@@ -192,36 +172,10 @@
         "desc": "<p>国家千人计划特聘专家，是中国海归留学生中成功的创业者之一。从2006年到现在，参与创办的企业包括：珅奥基医药科技有限公司，欧博方医药科技有限公司， 药渡经纬信息科技有限公司, 本草资本；发表30余篇论文，申请专利50余件；参与并主持许多国家项目：包括：“十一五”重大新药创制课题研究；科技部支撑计划；北京海淀科委“科技专项计划”等课题研究。</p>"
       },
       {
-        "id": 23,
-        "active": false,
-        "name": "Sharon Chan",
-        "title": "强生JLABS上海负责人",
-        "desc": "<p>暂无</p>"
-      },
-      {
-        "id": 24,
-        "active": false,
-        "name": "Simon Kos",
-        "title": "微软全球健康部首席医学官",
-        "desc": "<p>暂无</p>"
-      }
-    ]
-  },
-  {
-    "index": 9,
-    "main": [
-      {
         "id": 25,
         "active": false,
         "name": "曹二宝",
         "title": "中央人民政府驻香港特别行政区联络办公室研究部长、国务院参事室特约研究员。",
-        "desc": "<p>暂无</p>"
-      },
-      {
-        "id": 26,
-        "active": false,
-        "name": "阙波",
-        "title": "暂无",
         "desc": "<p>暂无</p>"
       },
       {
@@ -230,18 +184,13 @@
         "name": "卫炳江",
         "title": "香港理工大学副校长",
         "desc": "<p>Ir Professor Ping-kong Alexander Wai ( Fellow of IEEE, Fellow of Optical Society of America, Fellow of the Hong Kong Academy of Engineering Science) is Vice President (Research Development) of The Hong Kong Polytechnic University (PolyU). Professor Wai has been selected for the 'National Science and Technology Programmes Expert Database' since February 2012. Professor Wai has over 160 refereed international journal publications. He has participated in the organisation of many international conferences in photonics and optical communications such as the Conference of Laser and Electro-Optics and the Optical Fiber Communication Conference. Professor Wai is currently an Associate Editor of IEEE Journal of Lightwave Technology.</p><p>研究方向：Nonlinear Optics, Fiber Lasers, Fiber Optic Communications, and Network Theory</p>"
-      }
-    ]
-  },
-  {
-    "index": 10,
-    "main": [
+      },
       {
-        "id": 28,
+        "id": 9,
         "active": false,
-        "name": "饶毅",
-        "title": "现任首都医科大学校长，北京生命科学研究所资深研究员、学术副所长，未来论坛咨询委员会委员，《知识分子》主编  。",
-        "desc": "<p>研究领域：实验室研究方向是高等动物发育的分子信号，细胞迁移的分子机理、及其在控制肿瘤转移的应用。</p><p>执教课程：生物学思想与概念 Concepts and Ideas in Biology , Course master；分子和细胞神经生物学 Molecular and Cellular Neurobiology, Course master</p>"
+        "name": "Jean-Pierre Cazenave",
+        "title": "（吉恩•皮埃尔•卡泽纳夫）",
+        "desc": "<p>法国医学科学院院士、法国斯特拉斯堡大学教授、著名血液病学专家</p>"
       }
     ]
   }

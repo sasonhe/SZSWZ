@@ -113,7 +113,7 @@ export default {
 
 <style scoped>
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: .32rem;
 }
 .van-cell-group,.van-field{
   border-radius: 4px;
@@ -126,19 +126,24 @@ export default {
     background-color: #36a5be;
     border: 1px solid #36a5be;
 }
-.btn-main {
-  padding: 15px;
-  margin-top: 20px;
-  margin-top: 20%;
-}
 
 .control-label {
-  font-size: .46rem;
+  font-size: .44rem;
   margin-bottom: 6px;
   display: inline-block;
   color: #464646;
 }
 .register{
   overflow-y: auto;
+}
+.van-cell{
+  padding: .32rem .3rem;
+  font-size: .4rem;
+  line-height: .48rem;
+}
+.van-button--large{
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: .46rem;
 }
 </style>

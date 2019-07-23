@@ -39,13 +39,13 @@
 
 <style scoped>
 .desc{
-  font-size: .32rem;
+  font-size: .3rem;
   color: #263e64;
-  line-height: .48rem;
+  line-height: .7rem;
 }
 .desc p{
   margin:0;
-  font-size: .32rem;
+  font-size: .3rem;
 }
 
 </style>

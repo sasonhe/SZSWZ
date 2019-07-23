@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-  <van-divider :style="{ borderColor: '#263e64'}" class="bTitle">合作媒体</van-divider>
+  <van-divider :style="{ borderColor: '#263e64',color:'#fff'}" class="bTitle">合作媒体</van-divider>
   <div>
     <van-row>
       <van-col :span="span" v-for="item in 36" :key="item">
@@ -64,18 +64,17 @@ export default {
 }
 .imgItem{
   display: inline-block;
-  width: 3.8rem;
-  height: 2.3rem;
+  width: 3.4rem;
+  height: 2rem;
   margin:6px;
   padding:6px;
-  border: 1px solid #ddd;
 }
 .imgItemMoble{
   display: inline-block;
-  width: 2.6rem;
-  height: 1.6rem;
+  width: 2.4rem;
+  height: 1.2rem;
   margin: 6px;
   padding: 6px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
 }
 </style>

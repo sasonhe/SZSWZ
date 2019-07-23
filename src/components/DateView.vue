@@ -91,7 +91,7 @@ export default {
           gust:[]
         }
       ],
-      
+
     }
   },
   created() {},
@@ -119,7 +119,7 @@ export default {
 .nameTitle{
   font-size: .36rem;
   font-weight: bold;
-  line-height: .46rem;
+  line-height: .68rem;
   margin-top: 8px;
   margin-bottom: 8px
 }

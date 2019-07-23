@@ -2,11 +2,13 @@
   <div id="app">
     <Heard/>
     <TopImg />
-    <div class="bgColor">
+    <!-- :style="{backgroundImage:'url('+bgUrl+')'}" -->
+    <div class="bgColor" :style="{backgroundImage:'url('+bgImg+')'}">
       <!-- <Swiper/> -->
       <Jshao  class="d_jump"/>
+      <Organiza class="d_jump"/>
     </div>
-    <Organiza class="d_jump"/>
+
     <div class="bgColorA d_jump">
       <Gust/>
     </div>
@@ -16,26 +18,33 @@
     <div class="bgColorA">
       <fen-date/>
     </div>
+    <div class="bgColorB d_jump">
+      <div class="container">
+        <van-divider :style="{ borderColor: '#263e64'}" class="bTitle">往届嘉宾</van-divider>
+      </div>
+      <history2017/>
+      <history2018/>
+    </div>
     <div class="bgColorA d_jump">
       <Register/>
     </div>
-    <div class="d_jump">
+    <div class="d_jump" style="background: #0c3d8a;">
       <Media/>
     </div>
-
+    <div class="bgColorA d_jump">
+      <Footer/>
+    </div>
     <transition name="fade">
       <div class="goTop" v-show="goTop" @click="goToTop">
         <van-icon class="topSize" name="upgrade" />
       </div>
     </transition>
-    <!-- <Steps/> -->
   </div>
 </template>
 
 <script>
 import Heard from '@/components/Header';
 import TopImg from '@/components/TopImg';
-// import Swiper from '@/components/Swiper';
 import Jshao from '@/components/Jshao';
 import Organiza from '@/components/Organiza';
 import Gust from '@/components/Gust';
@@ -43,17 +52,20 @@ import DateView from '@/components/DateView';
 import FenDate from '@/components/FenDate';
 import Media from '@/components/Media';
 import Register from '@/components/Register';
-// import Steps from '@/components/Steps';
+import Footer from '@/components/Footer';
+import History2017 from '@/components/history-2017';
+import History2018 from '@/components/history-2018';
 let timer = null;
 export default {
   name: 'App',
   data(){
     return {
-      goTop: false
+      goTop: false,
+      bgImg:require('@/assets/logo/bg.jpg')
     }
   },
   components: {
-    Heard,TopImg,Jshao,Organiza,Gust,DateView,FenDate,Media,Register
+    Heard,TopImg,Jshao,Organiza,Gust,DateView,FenDate,Media,Register,Footer,History2017,History2018
   },
   mounted: function () {
     window.addEventListener('scroll', this.handleScroll, true);  // 监听（绑定）滚轮滚动事件
@@ -81,7 +93,27 @@ export default {
         }
         // let curHeight = document.documentElement.scrollTop || document.body.scrollTop; // 得到当前高度
         // console.log(curHeight);
+      },
+      IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
       }
+    },
+    computed:{
+      // bgUrl () {
+      //   let isWhat = this.IsPC()
+      //   return isWhat ? this.pbg : this.mbg
+      // }
     }
 }
 </script>
@@ -101,8 +133,12 @@ export default {
   font-size: .4rem;
 }
 .bgColor{
-  background: linear-gradient(to bottom,#7293d5,#e1eefc);
-  background: #e1eefc;
+  background: linear-gradient(to bottom,#2094d3,#e1eefc);
+  /* background: #e1eefc; */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center top;
+
 }
 .bTitle{
   font-size: .58rem;
@@ -114,7 +150,7 @@ export default {
   margin: 0;
 }
 .mTitle{
-  font-size: .4px;
+  font-size: .4rem;
   font-weight: bold;
   color: #263e64;
 }
@@ -137,7 +173,7 @@ export default {
   user-select: none;
 }
 .topSize{
-  font-size: 40px;
+  font-size: 1rem;
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;

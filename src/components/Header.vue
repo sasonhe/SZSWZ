@@ -5,7 +5,7 @@
         <van-icon class="haver" name="apps-o" slot="right" />
       </van-nav-bar>
       <transition name="van-slide-down">
-        <div class="list-bar" v-show="show">
+        <div class="list-bar" v-show="show" style="max-height:10rem;overflow-y: scroll;">
           <ul class="bar-list">
             <li class="bar-item van-hairline--bottom" v-for="(item,index) in json" :key="item.id">
               <a href="javascript:;" @click="jump(item.id)">{{item.name}}</a>
@@ -15,7 +15,7 @@
       </transition>
     </div>
     <div class="pHeader" v-if="showHeader">
-      <div class="container">
+      <div class="container" style="padding:0;">
         <van-row>
           <van-col span="6">
             <h1 class="Ptitle">2019国际生物医药产业创新展峰会</h1>
@@ -23,11 +23,22 @@
           <van-col span="18">
             <div class="item-header">
               <ul class="bar-list-p">
-                <li class="bar-item-p" v-for="(item,index) in json" :key="item.id">
+                <li class="bar-item-p" v-for="(item,index) in topBar" :key="item.id">
                   <a href="javascript:;" @click="jump(item.id)">{{item.name}}</a>
                 </li>
               </ul>
+              <div class="more" @mouseover="showMore()">
+                <span class="more-text" @mouseout="hideMore()">更多<van-icon class="absolute" name="arrow-down" /></span>
+                <div class="list-bar" v-show="pcMore" @mouseout="hideMore()">
+                  <ul class="bar-list">
+                    <li class="bar-item van-hairline--bottom" v-for="(item,index) in json" :key="item.id">
+                      <a href="javascript:;" @click="jump(item.id)">{{item.name}}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
+
           </van-col>
         </van-row>
       </div>
@@ -39,8 +50,27 @@
   export default {
     data() {
       return {
+        pcMore:false,
         show:false,
         showHeader:true,
+        topBar:[
+          {
+            id:0,
+            name:'大会简介'
+          },
+          {
+            id:1,
+            name:'组织架构'
+          },
+          {
+            id:2,
+            name:'峰会嘉宾'
+          },
+          {
+            id:3,
+            name:'峰会议程'
+          }
+        ],
         json:[
           {
             id:0,
@@ -71,11 +101,19 @@
           },
           {
             id:7,
-            name:'报名参会'
+            name:'往届嘉宾'
           },
           {
             id:8,
+            name:'报名参会'
+          },
+          {
+            id:9,
             name:'合作媒体'
+          },
+          {
+            id:10,
+            name:'联系我们'
           }
         ]
       }
@@ -89,6 +127,12 @@
       }
     },
     methods: {
+      hideMore(){
+        this.pcMore = false;
+      },
+      showMore(){
+        this.pcMore = true
+      },
       // 判断PC
       IsPC() {
         var userAgentInfo = navigator.userAgent;
@@ -156,7 +200,7 @@
 .pHeader{
   width: 100%;
   height: 1.4rem;
-  line-height: 1rem;
+  line-height: 1.4rem;
   position:fixed;
   top: 0;
   z-index:10;
@@ -193,8 +237,11 @@
   text-align: center;
   cursor: pointer;
 }
-.item-header .bar-list-p{
+.item-header{
   text-align: right;
+}
+.item-header .bar-list-p{
+  display: inline-block;
 }
 .bar-item-p{
   display: inline-block;
@@ -204,8 +251,11 @@
   height: .8rem;
   line-height:.8rem;
   font-size: .36rem;
-  color: #FFF;
+  color: #d4e3f3;
   cursor: pointer;
+}
+.bar-item-p a:hover{
+  color: #FFF;
 }
 .van-icon{
   font-size: .6rem;
@@ -220,5 +270,31 @@
   color: #FFF;
   font-size: .46rem;
 }
-
+.more{
+  display: inline-block;
+  position: relative;
+}
+.more-text{
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: .36rem;
+  color: #d4e3f3;
+  text-align: left;
+  width: 60px;
+}
+.more-text:hover{
+  color: #fff;
+}
+.absolute{
+  position: absolute;
+  top: 18px;
+  right: 0px;
+  color: #d4e3f3;
+}
+.more .list-bar{
+  position: absolute;
+  right: -24px;
+  z-index: 1;
+}
 </style>

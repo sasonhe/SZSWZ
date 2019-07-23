@@ -1,13 +1,13 @@
 <template>
   <div class="organiza container" >
-    <van-divider :style="{ borderColor: '#263e64'}" class="bTitle">峰会嘉宾</van-divider>
+    <h1 class="year">2017年</h1>
     <div class="guList" v-for="(item,index) in selectJson" :key="index">
       <div class="guwrap">
         <van-row type="flex" justify="space-around" style="margin-bottom:.4rem;">
           <van-col :span="span" v-for="(items,i) in item.main" :key="items.id">
             <div class="item" @click="toggleText(items,items.id,item.index)" :class="{ active: items.active }">
               <div class="top" >
-                <van-image width="100%" :src="'./static/images/'+items.id+'.jpg'"/>
+                <van-image width="100%" :src="'./static/history/2017/'+items.id+'.jpg'"/>
               </div>
               <div class="main">
                 <h3 class="name">{{items.name}}</h3>
@@ -22,7 +22,6 @@
           <p class="c-mtitle">{{items.title}}</p>
           <div class="t-m" v-html="items.desc"></div>
         </div>
-
       </div>
     </div>
 
@@ -35,11 +34,10 @@
     data() {
       return {
         span:8,
-        img1:require('@/assets/images/1/1.jpg'),
         textShow:false,
         isChoose:'',
-        json:require('../../static/gust-A.json'),
-        jsonPC:require('../../static/gust-B.json'),
+        json:require('../../static/2017-A.json'),
+        jsonPC:require('../../static/2017-B.json'),
         selectJson:[],
         text:{}
       }
@@ -88,15 +86,16 @@
 </script>
 
 <style scoped>
-
+.year{
+  font-size: .48rem;
+  color: #2ebafe;
+  text-align: center;
+}
 .organiza{
-  padding: .6rem 5px;
+  padding: .4rem 5px;
 }
 .item{
-  /* display: inline-block; */
-  /* max-width: 4.6rem; */
-  /* min-width: 3.1rem; */
-  height: 5.4rem;
+  height: 5.6rem;
   margin: 0 .1rem;
   text-align: center;
   position: relative;

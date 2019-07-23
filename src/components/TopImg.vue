@@ -11,7 +11,7 @@
   export default {
     data() {
       return {
-        topLogo:require('@/assets/top/logo.jpg'),
+        topLogo:require('@/assets/logo/logo.jpg')
       }
     },
     created() {
@@ -24,5 +24,8 @@
 <style scoped>
 .body{
   padding-top: 1.2rem;
+}
+.van-image{
+  display: block;
 }
 </style>
