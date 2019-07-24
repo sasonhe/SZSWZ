@@ -5,27 +5,35 @@
     <form ref="myform" method="post">
       <div class="form-group">
         <label class="control-label">姓名<span style="color:red;">*</span></label>
-        <van-cell-group>
-          <van-field placeholder="请输入姓名" ref="uiName" v-model.trim="data.uiName" />
-        </van-cell-group>
+        <div class="border">
+          <van-cell-group>
+            <van-field placeholder="请输入姓名" ref="uiName" v-model.trim="data.uiName" />
+          </van-cell-group>
+        </div>
       </div>
       <div class="form-group">
         <label class="control-label">公司<span style="color:red;">*</span></label>
-        <van-cell-group>
-          <van-field placeholder="请输入公司名称" ref="uiCompany" v-model.trim="data.uiCompany" />
-        </van-cell-group>
+        <div class="border">
+          <van-cell-group>
+            <van-field placeholder="请输入公司名称" ref="uiCompany" v-model.trim="data.uiCompany" />
+          </van-cell-group>
+        </div>
       </div>
       <div class="form-group">
         <label class="control-label">职位<span style="color:red;"></span></label>
-        <van-cell-group>
-          <van-field placeholder="请输入职位" v-model.trim="data.uiCompanyTitle" />
-        </van-cell-group>
+        <div class="border">
+          <van-cell-group>
+            <van-field placeholder="请输入职位" v-model.trim="data.uiCompanyTitle" />
+          </van-cell-group>
+        </div>
       </div>
       <div class="form-group">
         <label class="control-label">手机<span style="color:red;">*</span></label>
-        <van-cell-group>
-          <van-field placeholder="请输入手机号码" ref="uiPhone" v-model.trim="data.uiPhone1" />
-        </van-cell-group>
+        <div class="border">
+          <van-cell-group>
+            <van-field placeholder="请输入手机号码" ref="uiPhone" v-model.trim="data.uiPhone1" />
+          </van-cell-group>
+        </div>
       </div>
     </form>
     <div class="form-group">
@@ -140,6 +148,10 @@ export default {
   padding: .32rem .3rem;
   font-size: .4rem;
   line-height: .48rem;
+}
+.border{
+  border: 1px solid #36a5be;
+  border-radius: 4px;
 }
 .van-button--large{
   height: 1.2rem;

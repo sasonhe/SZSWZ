@@ -102,7 +102,7 @@ export default {
 
 <style scoped>
 .van-steps{
-  background-color: #0c3d8a !important;
+  background-color: rgba(0,0,0,0) !important;
 }
 .zTitle{
   display: inline-block;
@@ -127,7 +127,7 @@ export default {
   padding: 0 0 0 24px;
 }
 .color-A{
-  color: #ffffff;
+  color: #0788c6;
 }
 .color-B{
   color: #2ebafe;

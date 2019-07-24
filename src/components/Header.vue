@@ -7,8 +7,8 @@
       <transition name="van-slide-down">
         <div class="list-bar" v-show="show" style="max-height:10rem;overflow-y: scroll;">
           <ul class="bar-list">
-            <li class="bar-item van-hairline--bottom" v-for="(item,index) in json" :key="item.id">
-              <a href="javascript:;" @click="jump(item.id)">{{item.name}}</a>
+            <li class="bar-item van-hairline--bottom" v-for="(item,index) in json" :key="index">
+              <a href="javascript:;" @click="jump(index)">{{item.name}}</a>
             </li>
           </ul>
         </div>
@@ -23,16 +23,16 @@
           <van-col span="18">
             <div class="item-header">
               <ul class="bar-list-p">
-                <li class="bar-item-p" v-for="(item,index) in topBar" :key="item.id">
-                  <a href="javascript:;" @click="jump(item.id)">{{item.name}}</a>
+                <li class="bar-item-p" v-for="(item,index) in topBar" :key="index">
+                  <a href="javascript:;" @click="jump(index)">{{item.name}}</a>
                 </li>
               </ul>
               <div class="more" @mouseover="showMore()">
                 <span class="more-text" @mouseout="hideMore()">更多<van-icon class="absolute" name="arrow-down" /></span>
                 <div class="list-bar" v-show="pcMore" @mouseout="hideMore()">
                   <ul class="bar-list">
-                    <li class="bar-item van-hairline--bottom" v-for="(item,index) in json" :key="item.id">
-                      <a href="javascript:;" @click="jump(item.id)">{{item.name}}</a>
+                    <li class="bar-item van-hairline--bottom" v-for="(item,index) in json" :key="index">
+                      <a href="javascript:;" @click="jump(index)">{{item.name}}</a>
                     </li>
                   </ul>
                 </div>
@@ -89,30 +89,19 @@
             name:'峰会议程'
           },
           {
-            id:4,
-            name:'分会场 ( 一 )'
-          },{
             id:5,
-            name:'分会场 ( 二 )'
-          },
-          {
-            id:6,
-            name:'分会场 ( 三 )'
-          },
-          {
-            id:7,
             name:'往届嘉宾'
           },
           {
-            id:8,
+            id:6,
             name:'报名参会'
           },
           {
-            id:9,
+            id:7,
             name:'合作媒体'
           },
           {
-            id:10,
+            id:8,
             name:'联系我们'
           }
         ]
@@ -155,7 +144,7 @@
         this.show = false;
         // 用 class="d_jump" 添加锚点
         let jump = document.querySelectorAll('.d_jump')
-        let total = jump[index].offsetTop -60
+        let total = jump[index].offsetTop -80
         let distance = document.documentElement.scrollTop || document.body.scrollTop
         // 平滑滚动，时长500ms，每10ms一跳，共50跳
         let step = total / 50
@@ -204,15 +193,18 @@
   position:fixed;
   top: 0;
   z-index:10;
-  background: #36a5be;
+  background: #04183b;
   color: #fff;
 }
 .Ptitle{
-  font-size: .36rem;
+  font-size: .34rem;
   font-weight: 400;
+  color: #d6aeaa;
 }
 .haver{
   cursor: pointer;
+  padding: .2rem;
+  font-size: .34rem
 }
 .list-bar{
   width: 3rem;;
@@ -226,14 +218,14 @@
   background: rgba(54, 165, 190, .8);
 }
 .bar-item{
-  padding: .2rem 0;
+  padding: .1rem 0;
 }
 .bar-item a{
   display: block;
   height: .8rem;
   line-height:.8rem;
-  font-size: .4rem;
-  color: #FFF;
+  font-size: .34rem;
+  color: #fff;
   text-align: center;
   cursor: pointer;
 }
@@ -250,15 +242,15 @@
 .bar-item-p a{
   height: .8rem;
   line-height:.8rem;
-  font-size: .36rem;
-  color: #d4e3f3;
+  font-size: .34rem;
+  color: #d6aeaa;
   cursor: pointer;
 }
-.bar-item-p a:hover{
-  color: #FFF;
+.bar-item-p a:hover,.bar-item a:hover{
+  color: #fdc9c4;
 }
 .van-icon{
-  font-size: .6rem;
+  font-size: .48rem;
   color: #FFF;
 }
 .van-nav-bar{
@@ -279,22 +271,32 @@
   position: relative;
   cursor: pointer;
   font-size: .36rem;
-  color: #d4e3f3;
+  color: #d6aeaa;
   text-align: left;
   width: 60px;
 }
 .more-text:hover{
-  color: #fff;
+  color: #fdc9c4;
 }
 .absolute{
   position: absolute;
-  top: 18px;
-  right: 0px;
-  color: #d4e3f3;
+  top: 25px;
+  right: -6px;
+  color: #d6aeaa;
 }
 .more .list-bar{
   position: absolute;
-  right: -24px;
+  right: -50px;
   z-index: 1;
+}
+.more .bar-list{
+  background: #36a5be;
+  background: rgba(4, 24, 59, 0.8);
+}
+.more .bar-item a{
+  color: #d6aeaa;
+}
+.more .bar-item a:hover{
+  color: #fdc9c4;
 }
 </style>

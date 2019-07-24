@@ -4,14 +4,14 @@
     <div class="wrapper clearfix">
       <van-row>
         <van-col :span="spanFlex">
-          <div class="item-list van-hairline--surround">
+          <div class="item-list">
             <h2 class="topTitle">主办单位：</h2>
             <p class="msTitle">深圳市坪山区人民政府</p>
             <p class="msTitle">中国国际贸易促进委员会深圳市委员会</p>
           </div>
         </van-col>
         <van-col :span="spanFlex">
-          <div class="item-list van-hairline--surround">
+          <div class="item-list">
             <h2 class="topTitle">承办单位：</h2>
             <p class="msTitle">深圳市坪山区投资推广服务署</p>
             <p class="msTitle">深圳市坪山区工业和信息化局</p>
@@ -25,14 +25,14 @@
     <div class="wrapper clearfix">
       <van-row>
         <van-col :span="spanFlex">
-          <div class="item-list van-hairline--surround">
+          <div class="item-list">
             <h2 class="topTitle">支持单位：</h2>
             <p class="msTitle">中国科协生命科学学会联合体</p>
             <p class="msTitle">香港交易所</p>
           </div>
         </van-col>
         <van-col :span="spanFlex">
-          <div class="item-list van-hairline--surround">
+          <div class="item-list">
             <h2 class="topTitle">合作单位：</h2>
             <div class="clearfix">
               <van-row>
@@ -113,6 +113,8 @@ export default {
   margin: 0.2rem;
   padding: .2rem;
 }
-
+.van-hairline--surround::after{
+  border-color: #fff;
+}
 
 </style>

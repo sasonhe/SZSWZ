@@ -61,7 +61,7 @@
 
 <style scoped>
 .address{
-  font-size: .4rem;
+  font-size: .34rem;
   line-height: .8rem;
   padding: 0;
   color: #0788c6;

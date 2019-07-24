@@ -35,7 +35,6 @@
     data() {
       return {
         span:8,
-        img1:require('@/assets/images/1/1.jpg'),
         textShow:false,
         isChoose:'',
         json:require('../../static/gust-A.json'),
@@ -93,28 +92,27 @@
   padding: .6rem 5px;
 }
 .item{
-  /* display: inline-block; */
-  /* max-width: 4.6rem; */
-  /* min-width: 3.1rem; */
-  height: 5.4rem;
+  max-width: 3.6rem;
+  height: 5.6rem;
   margin: 0 .1rem;
   text-align: center;
   position: relative;
   vertical-align: top;
   background: #fff;
-  box-shadow: 0 10px 20px #bfd1e6;
+  box-shadow: 0px 8px 15px #bfd1e6;
+  background: #edf2ff;
+  background: linear-gradient(33deg, #b8ccee, #ffffff);
 }
 .item.active{
   top:-0.4rem;
   box-shadow: 0 0.1rem 0.2rem #8da5e0;
 }
 .top{
-  width: 2.6rem;
-  height: 3rem;
+  width: 2.2rem;
+  height: 2.8rem;
   overflow: hidden;
   margin: 0 auto;
-  position: relative;
-  top: -0.4rem;
+  padding-top: .2rem;
 }
 .bottom{
   position: absolute;
@@ -179,7 +177,7 @@
   font-size: .46rem;
 }
 .guwrap{
-  padding-top:1rem;
+  padding-top:.4rem;
   text-align: center;
 }
 .item:hover{

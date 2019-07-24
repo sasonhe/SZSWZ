@@ -2,30 +2,25 @@
   <div id="app">
     <Heard/>
     <TopImg />
-    <!-- :style="{backgroundImage:'url('+bgUrl+')'}" -->
-    <div class="bgColor" :style="{backgroundImage:'url('+bgImg+')'}">
-      <!-- <Swiper/> -->
+    <div class="bgColorB">
       <Jshao  class="d_jump"/>
       <Organiza class="d_jump"/>
     </div>
 
-    <div class="bgColorA d_jump">
+    <div class="bgColor d_jump">
       <Gust/>
     </div>
-    <div class="bgColorB d_jump">
-      <date-view/>
-    </div>
-    <div class="bgColorA">
+
+    <div class="d_jump" style="background: #5892ce;">
       <fen-date/>
     </div>
-    <div class="bgColorB d_jump">
+    <div class="bgColor d_jump">
       <div class="container">
         <van-divider :style="{ borderColor: '#263e64'}" class="bTitle">往届嘉宾</van-divider>
       </div>
-      <history2017/>
-      <history2018/>
+      <historyTabs/>
     </div>
-    <div class="bgColorA d_jump">
+    <div class="bgColorB d_jump">
       <Register/>
     </div>
     <div class="d_jump" style="background: #0c3d8a;">
@@ -48,24 +43,21 @@ import TopImg from '@/components/TopImg';
 import Jshao from '@/components/Jshao';
 import Organiza from '@/components/Organiza';
 import Gust from '@/components/Gust';
-import DateView from '@/components/DateView';
 import FenDate from '@/components/FenDate';
 import Media from '@/components/Media';
 import Register from '@/components/Register';
 import Footer from '@/components/Footer';
-import History2017 from '@/components/history-2017';
-import History2018 from '@/components/history-2018';
+import historyTabs from '@/components/historyTabs';
 let timer = null;
 export default {
   name: 'App',
   data(){
     return {
-      goTop: false,
-      bgImg:require('@/assets/logo/bg.jpg')
+      goTop: false
     }
   },
   components: {
-    Heard,TopImg,Jshao,Organiza,Gust,DateView,FenDate,Media,Register,Footer,History2017,History2018
+    Heard,TopImg,Jshao,Organiza,Gust,FenDate,Media,Register,Footer,historyTabs
   },
   mounted: function () {
     window.addEventListener('scroll', this.handleScroll, true);  // 监听（绑定）滚轮滚动事件
@@ -133,15 +125,18 @@ export default {
   font-size: .4rem;
 }
 .bgColor{
-  background: linear-gradient(to bottom,#2094d3,#e1eefc);
-  /* background: #e1eefc; */
-  background-repeat: no-repeat;
+  /* background: linear-gradient(to bottom,#2094d3,#e1eefc); */
+  background: #d2e2f2;
+  /* background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-position: center top;
+  background-position: center top; */
 
 }
+.bgColorC{
+  background:#8db8fe;
+}
 .bTitle{
-  font-size: .58rem;
+  font-size: .52rem;
   color: #263e64;
   font-weight: bold;
   letter-spacing: 3px;
@@ -194,5 +189,8 @@ export default {
 
 .clearfix {
   zoom: 1;
+}
+.tab .van-tabs--line .van-tabs__wrap{
+  height: 1.4rem;
 }
 </style>
