@@ -22,7 +22,7 @@
       </van-row>
     </div>
 
-    <div class="wrapper clearfix">
+    <!-- <div class="wrapper clearfix">
       <van-row>
         <van-col :span="spanFlex">
           <div class="item-list">
@@ -56,7 +56,7 @@
           </div>
         </van-col>
       </van-row>
-    </div>
+    </div> -->
   </div>
 </template>
 
