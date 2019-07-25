@@ -11,7 +11,7 @@
       <Gust/>
     </div>
 
-    <div class="d_jump" style="background: #5892ce;">
+    <div class="d_jump bgColorD">
       <fen-date/>
     </div>
     <div class="bgColor d_jump">
@@ -124,12 +124,18 @@ export default {
 .title{
   font-size: .4rem;
 }
+.bgColorD{
+  background: linear-gradient(to bottom,#ffffff,#d2e2f2);
+}
+.van-divider{
+  line-height: normal;
+}
+.van-divider:after, .van-divider:before{
+  border-width:1px;
+}
 .bgColor{
   /* background: linear-gradient(to bottom,#2094d3,#e1eefc); */
   background: #d2e2f2;
-  /* background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center top; */
 
 }
 .bgColorC{

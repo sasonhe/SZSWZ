@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <van-divider :style="{ borderColor: '#263e64'}" class="bTitle">峰会议程</van-divider>
-  <van-tabs class="tab" v-model="active" animated swipeable :offset-top="76" :border="false" background="#5892ce" color="#fff" title-inactive-color="#1f4770" title-active-color="#fff" line-width="30%">
+  <van-tabs class="tab" v-model="active" animated swipeable :offset-top="76" :border="false" background="#fff" color="#0788c6" title-inactive-color="#04183b" title-active-color="#0788c6" line-width="30%">
     <van-tab  v-for="(name,n) in fenData" :key="n" :title="name.name">
       <div style="padding:.4rem">
         <div class="flex fenTitle" v-for="(title,nd) in name.title" :key="nd">

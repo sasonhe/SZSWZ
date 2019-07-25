@@ -158,4 +158,5 @@ export default {
   line-height: 1.2rem;
   font-size: .46rem;
 }
+
 </style>

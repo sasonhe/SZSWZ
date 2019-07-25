@@ -96,7 +96,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .wrapper{
-  margin-bottom:.46rem;
+  margin-bottom:.2rem;
 }
 .topTitle{
   font-size: .46rem;
@@ -107,11 +107,11 @@ export default {
   font-size: .36rem;
   color: #263e64;
   font-weight: 600;
-  line-height: .68rem;
+  line-height: .56rem;
 }
 .item-list{
-  margin: 0.2rem;
-  padding: .2rem;
+  /* margin: 0.2rem; */
+  padding: 0 .2rem;
 }
 .van-hairline--surround::after{
   border-color: #fff;
