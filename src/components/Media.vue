@@ -3,7 +3,7 @@
   <van-divider :style="{ borderColor: '#263e64',color:'#fff'}" class="bTitle">合作媒体</van-divider>
   <div>
     <van-row>
-      <van-col :span="span" v-for="item in 36" :key="item">
+      <van-col class="imgwrapper" :span="span" v-for="item in 36" :key="item">
         <div :class="classObject">
           <van-image
             width="100%"
@@ -59,6 +59,9 @@ export default {
 </script>
 
 <style scoped>
+.imgwrapper{
+  text-align: center;
+}
 .flex{
   display: flex;
 }
@@ -71,9 +74,9 @@ export default {
 }
 .imgItemMoble{
   display: inline-block;
-  width: 2.4rem;
-  height: 1.2rem;
-  margin: 6px;
+  width: 1.6rem;
+  height: 1rem;
+  /* margin: 6px; */
   padding: 6px;
   /* border: 1px solid #ddd; */
 }

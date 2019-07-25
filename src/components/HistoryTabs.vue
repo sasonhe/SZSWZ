@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-  <van-tabs class="tab" v-model="active" animated swipeable :offset-top="76" :border="false" background="#d2e2f2" color="#0788c6" title-inactive-color="#1f4770" title-active-color="#0788c6" line-width="50%">
+  <van-tabs class="tab backgroundColor" v-model="active" animated swipeable :offset-top="76" :border="false" background="#d2e2f2" color="#0788c6" title-inactive-color="#1f4770" title-active-color="#0788c6" line-width="50%">
     <van-tab  title="2017年">
       <div style="padding:.4rem 0">
         <History2017/>
@@ -40,7 +40,7 @@ export default {
   font-weight: bold;
   line-height: .88rem;
 }
-.van-tabs__content{
+.backgroundColor .van-tabs__content{
   margin-top: .4rem;
   border-radius: 10px;
   background: #d2e2f2;
